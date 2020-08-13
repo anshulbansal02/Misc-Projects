@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <title>Musix | Download Songs</title>
+        <link rel="stylesheet" href="../static/style.css">
+        
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="search-bar">
+                <form action="{{ url_for('search') }}" method="post">
+                <input type="text" placeholder="Music, Songs and more" name="musicName"><button type="submit"><ion-icon name="search"></ion-icon></button>
+            </form>
+            </div>
+    
+
+            <div class="results-list">
+                {% for video in data %}
+                <div class="card">
+                    <div class='thumb'>
+                        <img src="{{video['thumbnail']}}" alt="Not Available">
+                    </div>
+                    <div class="rsection">
+                        <h1 class="title">{{video['title']}}</h1>
+                        <p class="channel">{{video['channel']}}</p>
+                        <p class="vid_discription">{{video['description']}}</p>
+                        <p class="tag"><ion-icon name="eye"></ion-icon>{{video['stats']['viewCount']}}</p>
+                        <p class="tag"><ion-icon name="thumbs-up"></ion-icon>{{video['stats']['likeCount']}}</p>
+                        <p class="tag"><ion-icon name="thumbs-down"></ion-icon>{{video['stats']['dislikeCount']}}</p>
+                        <p class="tag"><ion-icon name="chatbubbles"></ion-icon>{{video['stats']['commentCount']}}</p>
+                    </div>
+                    <div class="dl">
+                        <form action="{{ url_for('download') }}" method="POST">
+                            <input name="videoID" type="text" value="{{video['id']}}" style="display: none;">
+                        <button type="submit"><ion-icon name="cloud-download"></ion-icon></button> 
+                    </form>
+                    </div>
+                </div>
+                {% endfor %}
+            
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+
+    
+        <script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
+    </body>
+</html>

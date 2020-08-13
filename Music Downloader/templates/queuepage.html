@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Song List</title>
+        
+        <link rel="stylesheet" href="../static/queuepage.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="notepad">
+                <form action="{{ url_for('songList') }}" method="post">
+                <textarea name="songList" placeholder="Enter Song List
+........
+......
+...."></textarea>
+                <button>Process</button>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

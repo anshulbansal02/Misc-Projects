@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Hind, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+h3,
+p {
+    text-align: center;
+}
+
+.main-box {
+    display: block;
+    height: 40%;
+    width: 50%;
+    background: #fff;
+    margin: 170px auto;
+    padding: 30px;
+    box-shadow: 0px 1px 1px 0.5px rgba(0, 0, 0, 0.1);
+    animation: popin 0.5s;
+}
+
+@keyframes popin {
+    0% {
+        transform: scale(0);
+    }
+    72% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #26B999;
+}
+
+.a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333333;
+}
+
+img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}

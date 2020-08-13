@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Subscription &#124; Anshul Bansal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            background: #f4f7f6;
+            text-align: center;
+            font-family: Hind, sans-serif;
+        }
+        
+        .main {
+            background: #fff;
+            box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.07);
+            margin: 30px auto;
+            border-radius: 3px;
+            padding: 20px;
+            padding-bottom: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .link {
+            padding: 4px 20px;
+            background: transparent;
+            color: #626262;
+            font-size: 12px;
+            border: 1px solid #8e8e8e;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all ease 0.2s;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        @media .link:hover {
+            background: #26B999;
+            color: #fff;
+            border: 1px solid #26B999;
+        }
+        
+        .user-notif {
+            color: #313131;
+            font-size: 17px;
+            margin: 0 auto;
+            font-weight: 400;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-weight: 600;
+            color: #26B999;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 17px;
+        }
+        
+        .info {
+            color: #6a6a6a;
+            font-weight: 300;
+            font-size: 16px;
+            margin: 0;
+            margin-top: 30px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-top: 1px dashed #cccccc;
+            text-align: center;
+        }
+        
+        .info2 {
+            color: #888888;
+            font-weight: 400;
+            font-size: 13px;
+            margin: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body style="padding: 0;">
+
+
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="main">
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                    <tr>
+                        <td>
+                            <h3>Confirm Subscription!</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="user-notif">Hi! {{ name }}, for subscribing to my blog, you have to
+                                <br> confirm subscription by clicking the below link.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="link">localhost:5000/{{ serial_key }} </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                    <tr>
+                        <td>
+                            <p class="info">Confirming subscription helps us combat spamming and hacking,
+                                <br> Thanks for your cooperation!</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="info2">This email was sent by <a href="http://www.anshulbansal.esy.es/">www.anshulbansal.esy.es</a> to {{ v_email }}
+                    <br> for subscribing list, if you don’t recognise this email, simply ignore this.</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+
+</html>
